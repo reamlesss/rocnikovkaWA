@@ -8,7 +8,7 @@ function LogRegForm() {
   return (
     <>
       <div className="login">
-        <h1 className="header">Login</h1>
+        <h1 className="header">Login / Register</h1>
         <FloatingLabel
           controlId="floatingInput"
           label="Email address"

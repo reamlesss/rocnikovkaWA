@@ -1,16 +1,27 @@
-.login, .register {
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  animation: scaleUp 0.5s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
 }
 
 .input {
   width: 300px !important;
 }
 
-.submit-button, .register-button {
+.submit-button,
+.register-button {
   width: 300px;
 }
 

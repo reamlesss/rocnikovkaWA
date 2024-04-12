@@ -1,12 +1,15 @@
 import Navigation from "./components/Navigation.js";
 import LogRegForm from "./components/LogRegForm.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
   return (
     <>
       <Navigation></Navigation>
-      <LogRegForm></LogRegForm>
+      <div className="center-container">
+        <LogRegForm></LogRegForm>
+      </div>
     </>
   );
 }
