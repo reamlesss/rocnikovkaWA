@@ -16,7 +16,8 @@ function LogRegForm() {
         >
           <Form.Control
             type="email"
-            placeholder="name@example.com"
+            placeholder="n
+            \ame@example.com"
             className="input"
           />
         </FloatingLabel>
@@ -34,6 +35,36 @@ function LogRegForm() {
           Register
         </Button>
       </div>
+
+      <div className="register">
+        <h1 className="header">Login / Register</h1>
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Email address"
+          className="mb-3 input"
+        >
+          <Form.Control
+            type="email"
+            placeholder="n
+            \ame@example.com"
+            className="input"
+          />
+        </FloatingLabel>
+        <FloatingLabel controlId="floatingPassword" label="Password">
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            className="input"
+          />
+        </FloatingLabel>
+        <Button variant="success" className="submit-button">
+          Login
+        </Button>
+        <Button variant="success" className="register-button">
+          Register
+        </Button>
+      </div>
+
     </>
   );
 }
