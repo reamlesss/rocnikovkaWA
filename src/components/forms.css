@@ -1,4 +1,4 @@
-.login {
+.login .register {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,4 +32,24 @@
 .input:focus {
   border-color: green !important;
   box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25) !important;
+}
+
+.hide {
+  display: none;
+}
+
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  color: white !important;
+  text-align: center;
+}
+
+button {
+  box-shadow: 0px 0px 10px green;
 }

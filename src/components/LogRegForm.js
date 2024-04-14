@@ -7,7 +7,7 @@ import "./forms.css";
 function LogRegForm() {
   return (
     <>
-      <div className="login">
+      <div className="login hide">
         <h1 className="header">Login / Register</h1>
         <FloatingLabel
           controlId="floatingInput"
@@ -35,6 +35,8 @@ function LogRegForm() {
           Register
         </Button>
       </div>
+
+      {/* adas */}
 
       <div className="register">
         <h1 className="header">Login / Register</h1>
@@ -57,14 +59,15 @@ function LogRegForm() {
             className="input"
           />
         </FloatingLabel>
-        <Button variant="success" className="submit-button">
-          Login
-        </Button>
-        <Button variant="success" className="register-button">
-          Register
-        </Button>
+        <div className="button-group">
+          <Button variant="success" className="submit-button">
+            Login
+          </Button>
+          <Button variant="success" className="register-button">
+            Register
+          </Button>
+        </div>
       </div>
-
     </>
   );
 }
