@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -5,9 +6,15 @@ import Button from "react-bootstrap/Button";
 import "./forms.css";
 
 function LogRegForm() {
+  const [showLogin, setShowLogin] = useState(true);
+
+  const toggleForm = () => {
+    setShowLogin(!showLogin);
+  };
+
   return (
     <>
-      <div className="login hide">
+      <div className={showLogin ? "login" : "hide"}>
         <h1 className="header">Login / Register</h1>
         <FloatingLabel
           controlId="floatingInput"
@@ -28,17 +35,24 @@ function LogRegForm() {
             className="input"
           />
         </FloatingLabel>
-        <Button variant="success" className="submit-button">
-          Login
-        </Button>
-        <Button variant="success" className="register-button">
-          Register
-        </Button>
+
+        <div className="button-group">
+          <Button variant="success" className="submit-button">
+            Login
+          </Button>
+          <Button
+            variant="success"
+            className="register-button"
+            onClick={toggleForm}
+          >
+            Register
+          </Button>
+        </div>
       </div>
 
-      {/* adas */}
+      {/* register form */}
 
-      <div className="register">
+      <div className={showLogin ? "hide" : "register"}>
         <h1 className="header">Login / Register</h1>
         <FloatingLabel
           controlId="floatingInput"
@@ -60,11 +74,15 @@ function LogRegForm() {
           />
         </FloatingLabel>
         <div className="button-group">
-          <Button variant="success" className="submit-button">
-            Login
-          </Button>
           <Button variant="success" className="register-button">
             Register
+          </Button>
+          <Button
+            variant="success"
+            className="submit-button"
+            onClick={toggleForm}
+          >
+            Login
           </Button>
         </div>
       </div>
