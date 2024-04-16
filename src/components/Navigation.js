@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Navigation() {
   return (
-    <Navbar expand="lg" className="bg-success">
+    <Navbar expand="lg" className="bg-success sticky-top">
       <Container>
         <Navbar.Brand href="#home" className="text-light">
           Krasino

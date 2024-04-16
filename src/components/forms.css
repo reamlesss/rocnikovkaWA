@@ -1,17 +1,24 @@
-.login .register {
+.login,
+.register {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  animation: scaleUp 0.5s ease-in-out;
+  animation: scaleUp 0.7s ease-in-out;
 }
 
 @keyframes scaleUp {
   0% {
+    opacity: 0;
     transform: scaleY(0%);
   }
+  50% {
+    filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.343));
+  }
   100% {
+    filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0));
+    opacity: 1;
     transform: scaleY(100%);
   }
 }
@@ -42,7 +49,7 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  
+
   gap: 10px;
 }
 
@@ -53,4 +60,15 @@
 
 button {
   box-shadow: 0px 0px 10px green;
+}
+@keyframes fadeOutAndScaleDown {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+    display: none;
+  }
 }

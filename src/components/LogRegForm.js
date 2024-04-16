@@ -15,7 +15,7 @@ function LogRegForm() {
   return (
     <>
       <div className={showLogin ? "login" : "hide"}>
-        <h1 className="header">Login / Register</h1>
+        <h1 className="header">Login</h1>
         <FloatingLabel
           controlId="floatingInput"
           label="Email address"
@@ -53,7 +53,14 @@ function LogRegForm() {
       {/* register form */}
 
       <div className={showLogin ? "hide" : "register"}>
-        <h1 className="header">Login / Register</h1>
+        <h1 className="header">Register</h1>
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Username"
+          className="mb-3 input"
+        >
+          <Form.Control type="text" placeholder="john doe" className="input" />
+        </FloatingLabel>
         <FloatingLabel
           controlId="floatingInput"
           label="Email address"
